@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ubuntu-orange: #e95420;
+  --color-tech-blue: #005fb8;
+}
