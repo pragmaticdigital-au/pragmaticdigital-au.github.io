@@ -1,8 +1,15 @@
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
 interface RootLayoutProps {
   children: React.ReactNode;
 }
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ubuntu", // This creates a CSS variable
+});
 
 export const metadata = {
   title: "Pragmatic Digital",

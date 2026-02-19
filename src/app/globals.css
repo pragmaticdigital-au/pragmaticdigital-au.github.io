@@ -3,4 +3,5 @@
 @theme {
   --color-ubuntu-orange: #e95420;
   --color-tech-blue: #005fb8;
+  --font-sans: var(--font-ubuntu), ui-sans-serif, system-ui, sans-serif;
 }
