@@ -2,7 +2,7 @@ export default function Services() {
   const services: string[] = ["New Website Launch February 2026"];
   // const services = ["Custom Software Development", "Website Development"];
   return (
-    <nav className="p-4 border-b border-gray-100">
+    <nav id="services" className="p-4 border-b border-gray-100">
       <section>
         <ul className="space-y-3">
           {services.map((service) => (
