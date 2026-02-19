@@ -6,9 +6,10 @@ interface HeaderProps {
 
 function Header({ title }: HeaderProps) {
   return (
-    <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">
-      <span className="text-ubuntu-orange">Pragmatic</span>{" "}
+    <h1 className="text-4xl md:text-6xl font-black tracking-widest mb-4">
+      <span className="text-ubuntu-orange">Pragmatic</span> {"  "}
       <span className="text-tech-blue">Digital</span>
+      <span className="text-ubuntu-orange">&gt;</span>
     </h1>
   );
 }

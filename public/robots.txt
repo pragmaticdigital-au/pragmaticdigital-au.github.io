@@ -1,0 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Prevent indexing of the internal Next.js/Netlify folders
+Disallow: /_next/
+Disallow: /static/
+
+# If you eventually add a private admin area or staging page, uncomment below:
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemaps help Google find your pages faster
+Sitemap: https://pragmaticdigital.au/sitemap.xml
