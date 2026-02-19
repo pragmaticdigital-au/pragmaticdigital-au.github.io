@@ -8,7 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true, // Professional Tip: Change false to true for better bug prevention
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -17,6 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "baseUrl": ".", // Required for paths to work
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ] // Maps the @ symbol to your src folder
+    },
     "plugins": [
       {
         "name": "next"
@@ -26,10 +32,10 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts", // Explicitly include src
+    "src/**/*.tsx" // Explicitly include src components
+    ,
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
