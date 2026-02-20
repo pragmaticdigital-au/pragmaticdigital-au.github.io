@@ -8,8 +8,7 @@ export default function Footer() {
             Pragmatic Digital
           </h3>
           <p className="text-sm leading-relaxed">
-            Crafting Software and digital experiences with precision and
-            purpose. Based in Melbourne, Australia
+            Engineered in Melbourne. Deployed across Australia.
           </p>
         </div>
 

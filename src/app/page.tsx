@@ -6,13 +6,11 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-white">
       <Navbar />
-      <div className="max-w-7xl mx-auto px-6 py-12 space-y-20">
-        <Hero />
-        <Services />
-        <Contact />
-      </div>
+      <Hero />
+      <Services />
+      <Contact />
       <Footer />
     </main>
   );

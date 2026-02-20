@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-50">
+    <section id="contact" className="pt-10 pb-20 px-6 bg-white">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-3xl mx-auto bg-white p-12 rounded-3xl shadow-sm border border-slate-100">
           <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter">
@@ -31,18 +31,14 @@ export default function Contact() {
             {/* Use a button that looks like a link for better security */}
             <button
               onClick={handleEmailClick}
-              className="text-xl md:text-3xl font-black text-tech-blue hover:text-ubuntu-orange transition-all break-all sm:break-normal cursor-pointer"
+              className="group text-xl md:text-3xl font-black text-tech-blue hover:text-ubuntu-orange transition-all break-all sm:break-normal cursor-pointer"
             >
               {user}
-              <span className="text-ubuntu-orange">[at]</span>
+              <span className="text-ubuntu-orange group-hover:text-tech-blue transition-all">
+                [at]
+              </span>
               {domain}
             </button>
-          </div>
-
-          <div className="mt-10 pt-10 border-t border-slate-100">
-            <p className="text-slate-500 text-sm italic">
-              Based in Melbourne. Shipping Australia wide!
-            </p>
           </div>
         </div>
       </div>
