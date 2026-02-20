@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-ubuntu-orange: #e95420;
   --color-tech-blue: #005fb8;
