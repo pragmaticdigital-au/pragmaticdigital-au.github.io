@@ -11,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="pt-10 pb-20 px-6 bg-white">
+    <section id="contact" className="pt-0 pb-20 px-6 bg-white">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-3xl mx-auto bg-white p-12 rounded-3xl shadow-sm border border-slate-100">
           <h2 className="text-3xl md:text-5xl font-black mb-6 tracking-tighter">

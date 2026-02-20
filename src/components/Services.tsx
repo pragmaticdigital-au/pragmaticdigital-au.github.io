@@ -15,7 +15,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="pt-10 pb-20 px-6 bg-white">
+    <section id="services" className="pt-10 pb-10 px-6 bg-white">
       <div className="container mx-auto">
         {/* Section Header - Centered */}
         <div className="mb-16 text-center">
