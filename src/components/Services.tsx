@@ -20,7 +20,7 @@ export default function Services() {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-12 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-black text-tech-blue mb-4">
             Our <span className="text-ubuntu-orange">Services</span>
           </h2>
           <p className="text-slate-600 max-w-2xl">

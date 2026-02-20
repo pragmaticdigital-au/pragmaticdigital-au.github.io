@@ -20,7 +20,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-            Whether you have a fully-scoped project or just a rough idea on a
+            Whether you have a fully scoped project or just a rough idea on a
             napkin, we're ready to engineer a solution that works.
           </p>
 
