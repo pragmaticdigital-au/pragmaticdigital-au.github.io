@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title:
@@ -46,7 +47,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={ubuntu.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">{children}
+        <GoogleAnalytics/>
+      </body>
     </html>
   );
 }
