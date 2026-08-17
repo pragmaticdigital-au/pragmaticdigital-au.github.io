@@ -4,15 +4,12 @@ Source code for the **pragmaticdigital.au** website.
 
 ## Tech Stack
 
--   [Next.js](https://nextjs.org/)
-
--   TypeScript
-
--   [Tailwind CSS](https://tailwindcss.com/)
-
--   [Vercel](https://vercel.com/) / AWS
-
--   GitHub for source control and project management
+- [Next.js](https://nextjs.org/)
+- TypeScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) / AWS
+- GitHub for source control and project management
+- [pnpm](https://pnpm.io/) for package management
 
 ---
 
@@ -20,27 +17,40 @@ Source code for the **pragmaticdigital.au** website.
 
 Before working on the project, make sure you have the following installed:
 
--   Node.js
-
--   npm
-
--   Git
+- Node.js
+- pnpm
+- Git
 
 Check your installed versions:
 
 ```bash
 node --version
-npm --version
+pnpm --version
 git --version
 ```
 
 Use the Node.js version specified by the project if a version is configured in `.nvmrc`, `package.json`, or another project configuration file.
 
+### Installing pnpm
+
+If pnpm is not already installed, the recommended approach is to use Corepack:
+
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
+```
+
+Verify the installation:
+
+```bash
+pnpm --version
+```
+
 ---
 
 ## Getting Started
 
-### 1\. Clone the repository
+### 1. Clone the Repository
 
 Clone the repository to your local machine:
 
@@ -56,17 +66,21 @@ cd <PROJECT_DIRECTORY>
 
 ---
 
-### 2\. Install dependencies
+### 2. Install Dependencies
 
-Install the project dependencies:
+Install the project dependencies using pnpm:
 
 ```bash
-npm install
+pnpm install
 ```
+
+**Do not use `npm install` for this project.**
+
+The `pnpm-lock.yaml` file should be committed to Git and kept up to date.
 
 ---
 
-### 3\. Configure environment variables
+### 3. Configure Environment Variables
 
 If the project requires environment variables, create a local environment file:
 
@@ -76,7 +90,7 @@ cp .env.example .env.local
 
 If `.env.example` does not exist, create `.env.local` manually.
 
-Do **not** commit `.env.local` or any other file containing secrets to GitHub.
+**Do not commit `.env.local` or any other file containing secrets to GitHub.**
 
 Example:
 
@@ -88,12 +102,12 @@ Document required environment variables in `.env.example` without including real
 
 ---
 
-### 4\. Run the development server
+### 4. Run the Development Server
 
 Start the Next.js development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 The website should be available at:
@@ -106,11 +120,11 @@ The development server automatically reloads when you make changes to the source
 
 ---
 
-## Project Workflow
+# Project Workflow
 
 Development should be done using feature branches rather than directly on `main`.
 
-### 1\. Update your local `main` branch
+## 1. Update Your Local `main` Branch
 
 Before starting new work:
 
@@ -119,7 +133,7 @@ git checkout main
 git pull origin main
 ```
 
-### 2\. Create a feature branch
+## 2. Create a Feature Branch
 
 Create a branch that describes the work you are doing:
 
@@ -141,29 +155,29 @@ Branch names do not need to match the GitHub Issue title exactly.
 
 ---
 
-### 3\. Make your changes
+## 3. Make Your Changes
 
 Work on the website locally and test your changes using:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ---
 
-### 4\. Check your changes
+## 4. Check Your Changes
 
-Before committing, check the project's available scripts:
+Check the project's available scripts:
 
 ```bash
-npm run
+pnpm run
 ```
 
-Run the appropriate checks, such as:
+Run the appropriate checks:
 
 ```bash
-npm run lint
-npm run build
+pnpm lint
+pnpm build
 ```
 
 If the project contains tests, run them as well.
@@ -172,7 +186,7 @@ Make sure the production build succeeds before opening a Pull Request.
 
 ---
 
-### 5\. Commit your changes
+## 5. Commit Your Changes
 
 Create a descriptive commit:
 
@@ -185,7 +199,7 @@ Keep commits focused on a single piece of work where possible.
 
 ---
 
-### 6\. Push your branch
+## 6. Push Your Branch
 
 Push the branch to GitHub:
 
@@ -195,7 +209,7 @@ git push -u origin feature/google-analytics
 
 ---
 
-### 7\. Create a Pull Request
+## 7. Create a Pull Request
 
 On GitHub, create a Pull Request:
 
@@ -206,13 +220,10 @@ compare: feature/google-analytics
 
 The Pull Request should explain:
 
--   What was changed
-
--   Why the change was needed
-
--   How the change was tested
-
--   Any environment variables or configuration changes required
+- What was changed
+- Why the change was needed
+- How the change was tested
+- Any environment variables or configuration changes required
 
 If the work relates to a GitHub Issue, reference the issue in the Pull Request.
 
@@ -226,7 +237,7 @@ When the Pull Request is merged, GitHub will automatically close Issue #12.
 
 ---
 
-## GitHub Issue Workflow
+# GitHub Issue Workflow
 
 GitHub Issues are used to track website work.
 
@@ -288,13 +299,13 @@ Production deployment
 To create a production build locally:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 To run the production build locally:
 
 ```bash
-npm run start
+pnpm start
 ```
 
 The production server normally runs on:
@@ -315,25 +326,18 @@ The repository can be connected to the Vercel project so that deployments happen
 
 ## Vercel Deployment
 
-### Initial setup
+### Initial Setup
 
-1.  Create or sign in to the Vercel account.
-
-2.  Import the GitHub repository.
-
-3.  Select the appropriate framework:
-
-    -   Next.js
-
-4.  Configure the required environment variables.
-
-5.  Select `main` as the production branch.
-
-6.  Deploy the project.
+1. Create or sign in to the Vercel account.
+2. Import the GitHub repository.
+3. Select **Next.js** as the framework.
+4. Configure the required environment variables.
+5. Select `main` as the production branch.
+6. Deploy the project.
 
 After the repository is connected, Vercel can automatically create deployments when changes are pushed.
 
-### Recommended deployment workflow
+### Recommended Deployment Workflow
 
 ```text
 Local development
@@ -351,7 +355,7 @@ pragmaticdigital.au
 
 ---
 
-## Preview Deployments
+# Preview Deployments
 
 Feature branches and Pull Requests can be used to create preview deployments.
 
@@ -383,7 +387,7 @@ The exact AWS deployment process depends on the AWS services used by the project
 
 Before deploying to AWS, document the required infrastructure and deployment commands here.
 
-For example:
+Example:
 
 ```text
 AWS service:
@@ -395,7 +399,7 @@ Environment variables:
 Domain:
 ```
 
-Do not commit AWS credentials, access keys, or other secrets to the repository.
+**Do not commit AWS credentials, access keys, or other secrets to the repository.**
 
 ---
 
@@ -444,17 +448,12 @@ The actual Google Analytics ID should not be hard-coded in multiple places throu
 
 After configuring Google Analytics:
 
-1.  Run the website locally.
-
-2.  Confirm the application builds successfully.
-
-3.  Deploy to a preview environment.
-
-4.  Verify that analytics requests are being generated.
-
-5.  Confirm data is appearing in Google Analytics.
-
-6.  Merge the Pull Request into `main`.
+1. Run the website locally.
+2. Confirm the application builds successfully.
+3. Deploy to a preview environment.
+4. Verify that analytics requests are being generated.
+5. Confirm data is appearing in Google Analytics.
+6. Merge the Pull Request into `main`.
 
 ---
 
@@ -462,77 +461,122 @@ After configuring Google Analytics:
 
 Before creating a Pull Request, check:
 
--   The application runs locally.
+- The application runs locally.
+- The production build succeeds.
+- TypeScript errors have been resolved.
+- Linting passes.
+- New functionality has been tested.
+- Existing functionality has not been broken.
+- Environment variables are documented.
+- No secrets or credentials have been committed.
+- The Pull Request references the relevant GitHub Issue.
 
--   The production build succeeds.
+---
 
--   TypeScript errors have been resolved.
+# Package Management
 
--   Linting passes.
+This project uses **pnpm** as its package manager.
 
--   New functionality has been tested.
+Use pnpm for installing dependencies and running project scripts.
 
--   Existing functionality has not been broken.
+## Install Dependencies
 
--   Environment variables are documented.
+```bash
+pnpm install
+```
 
--   No secrets or credentials have been committed.
+## Add a Dependency
 
--   The Pull Request references the relevant GitHub Issue.
+```bash
+pnpm add <package>
+```
+
+## Add a Development Dependency
+
+```bash
+pnpm add -D <package>
+```
+
+## Remove a Dependency
+
+```bash
+pnpm remove <package>
+```
+
+## Update Dependencies
+
+```bash
+pnpm update
+```
+
+**Do not use `npm install` or `yarn` for this project** unless there is a specific reason and the package management configuration is intentionally being changed.
+
+The pnpm lockfile should be committed:
+
+```text
+pnpm-lock.yaml
+```
+
+Do not commit other package manager lockfiles such as:
+
+```text
+package-lock.json
+yarn.lock
+```
 
 ---
 
 # Useful Commands
 
-### Install dependencies
+## Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
-### Start development server
+## Start Development Server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-### Run linting
+## Run Linting
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
-### Build for production
+## Build for Production
 
 ```bash
-npm run build
+pnpm build
 ```
 
-### Start production server locally
+## Start Production Server Locally
 
 ```bash
-npm run start
+pnpm start
 ```
 
-### Check available npm scripts
+## Check Available Scripts
 
 ```bash
-npm run
+pnpm run
 ```
 
-### Check Git status
+## Check Git Status
 
 ```bash
 git status
 ```
 
-### Create a branch
+## Create a Branch
 
 ```bash
 git checkout -b feature/your-feature
 ```
 
-### Push a branch
+## Push a Branch
 
 ```bash
 git push -u origin feature/your-feature
@@ -550,10 +594,13 @@ git pull origin main
 
 git checkout -b feature/your-feature
 
+# Install/update dependencies if required
+pnpm install
+
 # Make your changes
 
-npm run lint
-npm run build
+pnpm lint
+pnpm build
 
 git add .
 git commit -m "Describe your changes"
@@ -581,6 +628,7 @@ A typical structure may look like:
 ├── .gitignore
 ├── next.config.*
 ├── package.json
+├── pnpm-lock.yaml
 ├── tailwind.config.*
 ├── tsconfig.json
 └── README.md
@@ -594,49 +642,34 @@ Follow the existing project structure when adding new files rather than creating
 
 Before deploying a significant change:
 
--    Pull the latest `main` branch.
-
--    Create a feature/fix branch.
-
--    Make and test the changes locally.
-
--    Run linting.
-
--    Run the production build.
-
--    Check environment variables.
-
--    Confirm no secrets are committed.
-
--    Push the branch.
-
--    Create a Pull Request.
-
--    Test the preview deployment.
-
--    Merge the Pull Request.
-
--    Confirm the production deployment succeeds.
-
--    Test the live website.
-
--    Confirm the related GitHub Issue is closed.
+- Pull the latest `main` branch.
+- Create a feature/fix branch.
+- Make and test the changes locally.
+- Run linting.
+- Run the production build.
+- Check environment variables.
+- Confirm no secrets are committed.
+- Confirm `pnpm-lock.yaml` is up to date.
+- Push the branch.
+- Create a Pull Request.
+- Test the preview deployment.
+- Merge the Pull Request.
+- Confirm the production deployment succeeds.
+- Test the live website.
+- Confirm the related GitHub Issue is closed.
 
 ---
 
 # Domain
 
-Production website:
+**Production website:**  
+https://www.pragmaticdigital.au/
 
-**[https://www.pragmaticdigital.au](https://www.pragmaticdigital.au/)**
+**Deployment platform:**  
+Vercel / AWS
 
-Deployment platform:
-
-**Vercel / AWS**
-
-Source repository:
-
-**GitHub**
+**Source repository:**  
+GitHub
 
 ---
 
@@ -646,6 +679,18 @@ Keep changes small and focused.
 
 Do not commit directly to `main` unless there is a specific reason to do so.
 
-For new functionality or fixes, create a branch, make the changes, test them, and submit a Pull Request.
+For new functionality or fixes:
+
+1. Create a branch.
+2. Make the changes.
+3. Install/update dependencies with pnpm when required.
+4. Test the changes.
+5. Run linting.
+6. Run the production build.
+7. Commit the changes.
+8. Push the branch.
+9. Submit a Pull Request.
+
+Use **pnpm** for package management and project commands.
 
 When possible, link every Pull Request to the GitHub Issue that describes the work.
