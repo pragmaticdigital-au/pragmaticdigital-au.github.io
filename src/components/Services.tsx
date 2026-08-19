@@ -18,6 +18,12 @@ export default function Services() {
         "Seamlessly connect your website, apps, CRMs, payment gateways, booking systems, AI tools, and business platforms to automate workflows and keep your data in sync.",
       icon: "🧩",
     },
+        {
+    title: "SEO & Digital Visibility",
+  description:
+    "Improve your search rankings, attract more qualified visitors, and grow your online presence with technical, on page, and performance focused SEO.",
+  icon: "🔎",
+    },
   ];
 
   return (
