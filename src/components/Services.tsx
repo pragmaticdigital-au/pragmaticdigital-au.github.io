@@ -3,14 +3,32 @@ export default function Services() {
     {
       title: "Custom Software Development",
       description:
-        "Scalable, robust applications tailored to your business logic using modern tech stacks.",
+        "Powerful, scalable software built around your unique business processes, from internal tools and dashboards to custom platforms and web applications.",
       icon: "💻",
     },
     {
       title: "Custom Website Development",
       description:
-        "High performance, SEO friendly websites that turn visitors into loyal customers.",
+        "From custom coded websites to WordPress and Squarespace, Pragmatic Digital build fast, modern, SEO friendly websites designed to attract visitors and turn them into customers.",
       icon: "🌐",
+    },
+    {
+      title: "API & Integration Services",
+      description:
+        "Seamlessly connect your website, apps, CRMs, payment gateways, booking systems, AI tools, and business platforms to automate workflows and keep your data in sync.",
+      icon: "🧩",
+    },
+    {
+      title: "SEO & Digital Visibility",
+      description:
+        "Improve your search rankings, attract more qualified visitors, and grow your online presence with technical, on page, and performance focused SEO.",
+      icon: "🔎",
+    },
+    {
+      title: "Open Source Software Solutions",
+      description:
+        "Leverage powerful open-source technologies to build flexible, secure, and cost effective solutions tailored to your business needs.",
+      icon: "🌱",
     },
   ];
 
